@@ -21,27 +21,26 @@ function setRatioMultiplier(canvas) {
   else if (canvas.width < 1101) canvas.ratioMultiplier = 1000;
 }
 
-function initiateDots(canvas, dots) {
-  console.log(dots);
+function initiateDots(canvas) {
   setCanvasDimensions(canvas);
   setNumDots(canvas);
   setRatioMultiplier(canvas);
-  for (let i = 0; i < canvas.numDots; i++) dots.push(new Dot(canvas));
+  for (let i = 0; i < canvas.numDots; i++) canvas.dots.push(new Dot(canvas));
 }
 
-function clear(canvas, ctx) {
+function clear(canvas) {
   const { width, height } = canvas;
-  ctx.clearRect(0, 0, width, height);
+  canvas.ctx.clearRect(0, 0, width, height);
 }
 
-function drawDot(dot, ctx) {
+function drawDot(dot, canvas) {
   const { x, y, radius } = dot;
 
-  ctx.beginPath();
-  ctx.arc(x, y, radius, 0, Math.PI * 2, true);
+  canvas.ctx.beginPath();
+  canvas.ctx.arc(x, y, radius, 0, Math.PI * 2, true);
 
-  ctx.fillStyle = dot.color;
-  ctx.fill();
+  canvas.ctx.fillStyle = dot.color;
+  canvas.ctx.fill();
 }
 
 function detectWalls(dot, canvas) {
@@ -55,16 +54,16 @@ function detectWalls(dot, canvas) {
   if (hitTopWall || hitBottomWall) dot.deltaY *= -1;
 }
 
-function drawLine(dot1, dot2, ctx) {
-  ctx.beginPath();
+function drawLine(dot1, dot2, canvas) {
+  canvas.ctx.beginPath();
 
-  ctx.moveTo(dot1.x, dot1.y);
+  canvas.ctx.moveTo(dot1.x, dot1.y);
 
-  ctx.lineTo(dot2.x, dot2.y);
-  ctx.lineWidth = 1;
-  ctx.strokeStyle = dot1.color;
+  canvas.ctx.lineTo(dot2.x, dot2.y);
+  canvas.ctx.lineWidth = 1;
+  canvas.ctx.strokeStyle = dot1.color;
 
-  ctx.stroke();
+  canvas.ctx.stroke();
 }
 
 function checkForXInRange(dot1, dot2, dotPairDistance) {
@@ -114,7 +113,7 @@ function generateDotPairs(dots, mousePosition) {
   return dotPairs;
 }
 
-function fadeDots(mousePosition, canvas, dots) {
+function fadeDots(mousePosition, canvas) {
   const getDistanceFromMouse = (dot) =>
     Math.abs(dot.x - mousePosition.x) + Math.abs(dot.y - mousePosition.y);
 
@@ -127,18 +126,18 @@ function fadeDots(mousePosition, canvas, dots) {
     return distanceRatio < 1 ? distanceRatio : 1;
   }
 
-  dots.forEach((dot) => {
+  canvas.dots.forEach((dot) => {
     const alpha = 1 - getDistanceRatio(dot);
 
     dot.changeAlpa(alpha);
   });
 }
 
-function updateDots(dots, canvas, ctx, mousePosition) {
-  clear(canvas, ctx);
+function updateDots(canvas, mousePosition) {
+  clear(canvas);
 
-  dots.forEach((dot) => {
-    drawDot(dot, ctx);
+  canvas.dots.forEach((dot) => {
+    drawDot(dot, canvas);
 
     detectWalls(dot, canvas);
 
@@ -146,25 +145,25 @@ function updateDots(dots, canvas, ctx, mousePosition) {
     dot.y += dot.deltaY;
   });
 
-  fadeDots(mousePosition, canvas, dots);
+  fadeDots(mousePosition, canvas);
 
-  const dotPairs = generateDotPairs(dots, mousePosition);
+  const dotPairs = generateDotPairs(canvas.dots, mousePosition);
 
-  dotPairs.forEach((pair) => drawLine(pair[0], pair[1], ctx));
+  dotPairs.forEach((pair) => drawLine(pair[0], pair[1], canvas));
 
   canvas.animationId = requestAnimationFrame(() =>
-    updateDots(dots, canvas, ctx, mousePosition)
+    updateDots(canvas, mousePosition)
   );
 }
 
-function resetDots(dots, canvas, ctx, mousePosition) {
-  dots.length = 0;
-  initiateDots(canvas, dots);
-  updateDots(dots, canvas, ctx, mousePosition);
+function resetDots(canvas, mousePosition) {
+  canvas.dots.length = 0;
+  initiateDots(canvas);
+  updateDots(canvas, mousePosition);
 }
 
-function screenResizeHandler(dots, canvas, ctx, mousePosition) {
-  resetDots(dots, canvas, ctx, mousePosition);
+function screenResizeHandler(canvas, mousePosition) {
+  resetDots(canvas, mousePosition);
 }
 
 const utils = {

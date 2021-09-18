@@ -6,11 +6,11 @@ import classes from '../../styles/heroCanvas.module.css';
 const Canvas = () => {
   const canvasRef = useRef(null);
   const { updateDots, initiateDots, screenResizeHandler, clear } = utils;
-  const dots = [];
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    canvas.ctx = canvas.getContext('2d');
+    canvas.dots = [];
 
     const mousePosition = {
       x: window.innerWidth / 2,
@@ -22,9 +22,9 @@ const Canvas = () => {
       mousePosition.y = e.pageY;
     }
 
-    initiateDots(canvas, dots);
+    initiateDots(canvas);
 
-    updateDots(dots, canvas, ctx, mousePosition);
+    updateDots(canvas, mousePosition);
 
     document.addEventListener('mousemove', changeMousePosition);
 
@@ -32,13 +32,10 @@ const Canvas = () => {
     window.addEventListener('resize', () => {
       clearTimeout(timer);
 
-      clear(canvas, ctx);
+      clear(canvas);
       cancelAnimationFrame(canvas.animationId);
 
-      timer = setTimeout(
-        () => screenResizeHandler(dots, canvas, ctx, mousePosition),
-        50
-      );
+      timer = setTimeout(() => screenResizeHandler(canvas, mousePosition), 50);
     });
 
     return () => {
