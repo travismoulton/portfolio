@@ -162,15 +162,18 @@ function resetDots(canvas, mousePosition) {
   updateDots(canvas, mousePosition);
 }
 
+let timer;
 function screenResizeHandler(canvas, mousePosition) {
-  resetDots(canvas, mousePosition);
+  clearTimeout(timer);
+  clear(canvas);
+  cancelAnimationFrame(canvas.animationId);
+  timer = setTimeout(() => resetDots(canvas, mousePosition), 50);
 }
 
 const utils = {
   updateDots,
   initiateDots,
   screenResizeHandler,
-  clear,
 };
 
 export default utils;

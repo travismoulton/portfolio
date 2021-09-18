@@ -25,8 +25,9 @@ class Dot {
     this.x = Math.random() * width;
     this.y = Math.random() * height;
     this.radius = Math.random() * 3;
-    this.deltaX = Math.random();
-    this.deltaY = Math.random();
+    // Randomly have half move in a positive direction, the other hald negative
+    this.deltaX = Math.random() < 0.5 ? -Math.random() : Math.random();
+    this.deltaY = Math.random() < 0.5 ? -Math.random() : Math.random();
 
     this.color = getRandomColor();
   }

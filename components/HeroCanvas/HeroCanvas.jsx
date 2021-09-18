@@ -3,9 +3,9 @@ import React, { useRef, useEffect } from 'react';
 import utils from './heroCanvasUtils';
 import classes from '../../styles/heroCanvas.module.css';
 
-const Canvas = () => {
+export default function Canvas() {
   const canvasRef = useRef(null);
-  const { updateDots, initiateDots, screenResizeHandler, clear } = utils;
+  const { updateDots, initiateDots, screenResizeHandler } = utils;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,15 +28,9 @@ const Canvas = () => {
 
     document.addEventListener('mousemove', changeMousePosition);
 
-    let timer;
-    window.addEventListener('resize', () => {
-      clearTimeout(timer);
-
-      clear(canvas);
-      cancelAnimationFrame(canvas.animationId);
-
-      timer = setTimeout(() => screenResizeHandler(canvas, mousePosition), 50);
-    });
+    window.addEventListener('resize', () =>
+      screenResizeHandler(canvas, mousePosition)
+    );
 
     return () => {
       window.cancelAnimationFrame(canvas.animationId);
@@ -45,6 +39,4 @@ const Canvas = () => {
   }, []);
 
   return <canvas ref={canvasRef} className={classes.heroCanvas} />;
-};
-
-export default Canvas;
+}
