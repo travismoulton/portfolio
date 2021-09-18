@@ -22,15 +22,11 @@ function setRatioMultiplier(canvas) {
 }
 
 function initiateDots(canvas, dots) {
+  console.log(dots);
   setCanvasDimensions(canvas);
   setNumDots(canvas);
   setRatioMultiplier(canvas);
   for (let i = 0; i < canvas.numDots; i++) dots.push(new Dot(canvas));
-}
-
-function resetDots(dots, canvas) {
-  dots.length = 0;
-  initiateDots(dots, canvas);
 }
 
 function clear(canvas, ctx) {
@@ -161,9 +157,14 @@ function updateDots(dots, canvas, ctx, mousePosition) {
   );
 }
 
-function screenResizeHandler(dots, canvas) {
-  resetDots(dots, canvas);
-  updateDots(dots, canvas);
+function resetDots(dots, canvas, ctx, mousePosition) {
+  dots.length = 0;
+  initiateDots(canvas, dots);
+  updateDots(dots, canvas, ctx, mousePosition);
+}
+
+function screenResizeHandler(dots, canvas, ctx, mousePosition) {
+  resetDots(dots, canvas, ctx, mousePosition);
 }
 
 const utils = {

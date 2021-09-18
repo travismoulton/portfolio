@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 
-import utils from './utils';
+import utils from './heroCanvasUtils';
 import classes from '../../styles/heroCanvas.module.css';
 
 const Canvas = () => {
   const canvasRef = useRef(null);
-  const { updateDots, initiateDots } = utils;
+  const { updateDots, initiateDots, screenResizeHandler, clear } = utils;
   const dots = [];
 
   useEffect(() => {
@@ -27,6 +27,19 @@ const Canvas = () => {
     updateDots(dots, canvas, ctx, mousePosition);
 
     document.addEventListener('mousemove', changeMousePosition);
+
+    let timer;
+    window.addEventListener('resize', () => {
+      clearTimeout(timer);
+
+      clear(canvas, ctx);
+      cancelAnimationFrame(canvas.animationId);
+
+      timer = setTimeout(
+        () => screenResizeHandler(dots, canvas, ctx, mousePosition),
+        50
+      );
+    });
 
     return () => {
       window.cancelAnimationFrame(canvas.animationId);
