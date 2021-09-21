@@ -1,0 +1,9 @@
+.header-enter {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+.header-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1.2s, transform 1.2s;
+}

@@ -1,9 +1,18 @@
+import { useEffect, useState } from 'react';
+
 import Head from 'next/head';
 
 import styles from '../styles/Home.module.css';
 import HeroCanvas from '../components/HeroCanvas/HeroCanvas';
+import HeroHeader from '../components/HeroHeader/HeroHeader';
 
 export default function Home() {
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  useEffect(() => {
+    setShowAnimation(true);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroCanvas />
+      <HeroHeader show={showAnimation} />
     </div>
   );
 }
