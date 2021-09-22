@@ -6,12 +6,13 @@ import classes from '../../styles/HeroHeader.module.css';
 export default function HeroHeader({ show }) {
   const nodeRef1 = useRef(null);
   const nodeRef2 = useRef(null);
+
   return (
     <div className={classes.HeroHeader}>
       <CSSTransition
         nodeRef={nodeRef1}
         in={show}
-        timeout={1000}
+        timeout={1200}
         mountOnEnter
         classNames="header__top"
       >
@@ -20,7 +21,7 @@ export default function HeroHeader({ show }) {
       <CSSTransition
         nodeRef={nodeRef2}
         in={show}
-        timeout={1000}
+        timeout={1200}
         mountOnEnter
         classNames="header__bottom"
       >

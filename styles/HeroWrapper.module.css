@@ -1,0 +1,4 @@
+.HeroWrapper {
+  display: flex;
+  flex-direction: column;
+}
