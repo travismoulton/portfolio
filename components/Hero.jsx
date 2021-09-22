@@ -15,12 +15,12 @@ export default function HeroContainer() {
   console.log(showAnimation);
 
   return (
-    <>
+    <div className={classes.Hero}>
       <HeroCanvas />
       <div className={classes.HeroWrapper}>
         <HeroHeader show={showAnimation} />
         <HeroBtn startTimer={showAnimation} />
       </div>
-    </>
+    </div>
   );
 }

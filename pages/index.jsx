@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import styles from '../styles/Home.module.css';
 import Hero from '../components/Hero';
+import MyWork from '../components/MyWork';
 
 export default function Home() {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -20,6 +21,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <MyWork />
     </div>
   );
 }

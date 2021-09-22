@@ -4,3 +4,9 @@
   margin-bottom: 10%;
   height: 20rem;
 }
+
+.Hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
