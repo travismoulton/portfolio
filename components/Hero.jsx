@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import classes from '../styles/HeroWrapper.module.css';
-import HeroBtn from './HeroBtn/HeroBtn';
-import HeroHeader from './HeroHeader/HeroHeader';
+import HeroBtn from './HeroBtn';
+import HeroHeader from './HeroHeader';
 import HeroCanvas from './HeroCanvas/HeroCanvas';
 
 export default function HeroContainer() {
@@ -19,7 +19,7 @@ export default function HeroContainer() {
       <HeroCanvas />
       <div className={classes.HeroWrapper}>
         <HeroHeader show={showAnimation} />
-        <HeroBtn />
+        <HeroBtn startTimer={showAnimation} />
       </div>
     </>
   );

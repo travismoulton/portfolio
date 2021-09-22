@@ -1,15 +1,18 @@
 .HeroBtn {
   z-index: 1;
-
   background-color: #fff;
   border-radius: 10rem;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 6rem;
   border: none;
   cursor: pointer;
   font-size: 1.6rem;
   text-transform: uppercase;
   color: #777;
   position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .HeroBtn::after {
@@ -39,4 +42,8 @@
 .HeroBtn:active {
   transform: translateY(0.2rem);
   box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+}
+
+.HeroBtn svg {
+  font-size: 1.6rem;
 }
