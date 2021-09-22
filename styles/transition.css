@@ -1,8 +1,18 @@
-.header-enter {
+.header__top-enter {
   opacity: 0;
   transform: translateX(-30%);
 }
-.header-enter-active {
+.header__top-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1.2s, transform 1.2s;
+}
+
+.header__bottom-enter {
+  opacity: 0;
+  transform: translateX(30%);
+}
+.header__bottom-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 1.2s, transform 1.2s;

@@ -1,21 +1,31 @@
-import { CSSTransition, Transition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
 
 import classes from '../../styles/HeroHeader.module.css';
 
 export default function HeroHeader({ show }) {
-  const nodeRef = useRef(null);
+  const nodeRef1 = useRef(null);
+  const nodeRef2 = useRef(null);
   return (
-    <CSSTransition
-      nodeRef={nodeRef}
-      in={show}
-      timeout={1000}
-      mountOnEnter
-      classNames="header"
-    >
-      <h1 ref={nodeRef} className={classes.HeroHeader}>
-        Travis Moulton
-      </h1>
-    </CSSTransition>
+    <div className={classes.HeroHeader}>
+      <CSSTransition
+        nodeRef={nodeRef1}
+        in={show}
+        timeout={1000}
+        mountOnEnter
+        classNames="header__top"
+      >
+        <h1 ref={nodeRef1}>Hi! I'm Travis Moulton,</h1>
+      </CSSTransition>
+      <CSSTransition
+        nodeRef={nodeRef2}
+        in={show}
+        timeout={1000}
+        mountOnEnter
+        classNames="header__bottom"
+      >
+        <h1 ref={nodeRef2}>Front End Web Developer</h1>
+      </CSSTransition>
+    </div>
   );
 }
