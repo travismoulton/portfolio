@@ -3,7 +3,8 @@
 import Dot from './Dot';
 
 function setCanvasDimensions(canvas) {
-  canvas.width = window.innerWidth;
+  // Width of the document minus the scroll bar
+  canvas.width = document.body.clientWidth;
   canvas.height = window.innerHeight;
 }
 
@@ -84,15 +85,16 @@ function checkForDotPair(dot1, dot2) {
   const yInRange = checkForYInRange(dot1, dot2, dotPairDistance);
 
   if (xInRange && yInRange) return [dot1, dot2];
+
   // Empty arrays will be filtered out when creating the final set of dot pairs
   return [];
 }
 
 function createPairs(dots) {
   if (dots.length < 2) return [];
-  const first = dots[0];
+  const firstDot = dots[0];
   const rest = dots.slice(1);
-  const pairs = rest.map((arrayItem) => checkForDotPair(first, arrayItem));
+  const pairs = rest.map((currentDot) => checkForDotPair(firstDot, currentDot));
   return pairs.concat(createPairs(rest));
 }
 
