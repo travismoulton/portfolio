@@ -1,0 +1,38 @@
+.ProjectCard {
+  width: 75%;
+  height: 40rem;
+  border: 1px solid #55efc4;
+  box-shadow: 0 0 1px 3px rgba(85, 239, 196, 0.3);
+  display: flex;
+}
+
+.ProjectImg {
+  border-radius: 5px;
+}
+
+.ProjectImgWrapper {
+  align-self: center;
+  justify-self: flex-end;
+  margin-left: auto;
+  margin-right: 1rem;
+  width: 35rem;
+  height: 35rem;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.ProjectImgWrapper:hover {
+  transform: scaleY(1.125) scaleX(1.05);
+}
+
+.ProjectTitle {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 400;
+  margin-left: 25%;
+  text-decoration: underline;
+}
+
+.ProjectDescription {
+  color: #fff;
+}

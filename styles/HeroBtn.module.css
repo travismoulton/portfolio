@@ -48,3 +48,7 @@
 .ScrollLink {
   width: 100%;
 }
+
+.HeroBtn span {
+  font-size: 2rem;
+}
