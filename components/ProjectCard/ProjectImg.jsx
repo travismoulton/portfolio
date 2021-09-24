@@ -1,14 +1,16 @@
 import Image from 'next/image';
 
 import MTGImage from '../../public/MTGPowerSearchImg.png';
-import MTGHomePage from '../../public/MTGHomePage.png';
+import WorkoutImg from '../../public/WorkoutImg2.png';
 import classes from '../../styles/ProjectCard.module.css';
+
+const images = { MTGImage, WorkoutImg };
 
 export default function ProjectImg({ img }) {
   return (
     <div className={classes.ProjectImgWrapper}>
       <Image
-        src={MTGImage}
+        src={images[img]}
         alt={img}
         className={classes.ProjectImg}
         layout="fill"
