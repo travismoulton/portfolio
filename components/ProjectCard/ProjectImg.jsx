@@ -14,6 +14,7 @@ export default function ProjectImg({ img }) {
         alt={img}
         className={classes.ProjectImg}
         layout="fill"
+        loading="eager"
       />
     </div>
   );

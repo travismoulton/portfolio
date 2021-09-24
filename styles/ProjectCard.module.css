@@ -2,8 +2,10 @@
   width: 90%;
   height: 45%;
   border: 1px solid #55efc4;
-  box-shadow: 0 0 1px 3px rgba(85, 239, 196, 0.3);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(85, 239, 196, 0.3);
   display: flex;
+  margin: 1rem 0;
 }
 
 .CardLeft {
@@ -20,7 +22,7 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
-  margin-right: 1rem;
+  margin-right: 1.4rem;
   width: 90%;
   height: 90%;
   transition: transform 0.2s;
@@ -29,7 +31,7 @@
 }
 
 .ProjectImgWrapper:hover {
-  transform: scaleY(1.125) scaleX(1.05);
+  transform: scaleY(1.11) scaleX(1.03);
 }
 
 .ProjectTitle {
@@ -60,21 +62,63 @@
 .LinkWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   transition: filter 0.2s;
 }
 
 .ProjectLink {
   color: #55efc4;
   font-size: 2rem;
+  margin-bottom: 0.3rem;
 }
 
 .ProjectLink:hover {
   filter: brightness(150%);
 }
 
+@media only screen and (max-width: 1450px) {
+  .ProjectCard {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .ProjectDescription {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @media only screen and (max-width: 1250px) {
   .CardLeft {
     width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ProjectCard {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .CardLeft {
+    width: 100%;
+  }
+
+  .ProjectImgWrapper {
+    margin: 1rem auto;
+    height: 50rem;
+    width: 96%;
+  }
+
+  .ProjectImgWrapper:hover {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ProjectImgWrapper {
+    height: 35rem;
   }
 }

@@ -2,10 +2,10 @@ import classes from '../styles/MyWork.module.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
 const mtgDesc =
-  "This project is built using Flask and Python on the backend with vanilla JS, html, and SASS on the front. I used BEM for naming classes. The databse is postgres with SQLAlchemy used in flask as an ORM. User passwords are encrypted by sha_256 to keep them secure. The app is deployed on heroku, and the SSL is through cloudflare. It also features a built by hand webpack config. The backend uses celery to update the user's inventory value once per day (only if they login) asynchronously upon arrival to the site.";
+  'A search engine for Magic The Gathering Cards. Allows the user to search for cards based on multpile card attributes. The user can view a list of cards, or view details on a single card. The user also has the ability to create an account and manage their inventory and track the dollar value of their cards. More information found in the README on the Github Repo';
 
 const workoutDesc =
-  'This project is built using React Hooks, and Redux for state management using the redux toolkit. I used Firebase for the database and Auth system. There are robust rules inside the database to properly protect the data. I also used React-Select, React-Icons, and React-Transition-Group. I used "CSS" modules for styling, with custom properties inside of index.css. There is extensive testing using Jest and react-testing-library';
+  "An app that allows the user to search through a database of exercises, track their favorites for easy access, and assemble workouts made up of those exercises. The user can also create a routine and record workouts. The app will suggest the days workout based on the settings in the user's routine. More information can be found the in the README on the Github Repo";
 
 const MTGDetails = {
   img: 'MTGImage',
