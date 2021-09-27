@@ -1,3 +1,11 @@
+import classes from '../styles/MySkills.module.css';
+import SkillsContainer from './SkillsContainer';
+
 export default function MySkills() {
-  return <section className={classes.MySkills} id="MySkills"></section>;
+  return (
+    <section className={classes.MySkills} id="MySkills">
+      <h2 className={classes.Header}>My Skills</h2>
+      <SkillsContainer />
+    </section>
+  );
 }

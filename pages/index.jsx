@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import Hero from '../components/Hero';
 import MyWork from '../components/MyWork';
 import Nav from '../components/Nav';
+import MySkills from '../components/MySkills';
 
 export default function Home() {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <Nav />
       <MyWork />
+      <MySkills />
     </div>
   );
 }

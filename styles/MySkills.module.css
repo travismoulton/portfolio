@@ -1,9 +1,19 @@
-.MyWork {
+.MySkills {
   width: 100%;
+
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 3rem 1rem;
+}
+
+.Header {
+  font-size: 3rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 2rem;
+  margin-top: 4.5rem;
 }
