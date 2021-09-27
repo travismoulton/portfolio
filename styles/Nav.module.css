@@ -1,0 +1,14 @@
+.Nav {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--color-green);
+  position: absolute;
+  bottom: -5rem;
+  z-index: 100;
+}
+
+.Sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

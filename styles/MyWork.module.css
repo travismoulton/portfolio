@@ -22,3 +22,9 @@
     height: auto;
   }
 }
+
+@media only screen and (max-height: 700px) {
+  .MyWork {
+    height: auto;
+  }
+}
