@@ -1,0 +1,22 @@
+.NavLink {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  transition: color 0.3s;
+  font-size: 1.8rem;
+}
+
+.NavLink:hover {
+  color: rgba(255, 255, 255, 1);
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.active {
+  /* color: rgba(255, 255, 255, 1); */
+  color: orangered;
+}
+
+.NavLink:not(:last-child) {
+  margin-right: 2.5rem;
+}

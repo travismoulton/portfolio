@@ -15,7 +15,7 @@ export default function HeroContainer() {
   console.log(showAnimation);
 
   return (
-    <div className={classes.Hero}>
+    <div id="Hero" className={classes.Hero}>
       <HeroCanvas />
       <div className={classes.HeroWrapper}>
         <HeroHeader show={showAnimation} />

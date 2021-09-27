@@ -1,6 +1,17 @@
 import { useState, useEffect } from 'react';
 
+import NavLink from './NavLink';
 import classes from '../styles/Nav.module.css';
+
+const homeLinkProps = {
+  linkTxt: 'Home',
+  target: 'Hero',
+};
+
+const myWorkLinkProps = {
+  linkTxt: 'My Work',
+  target: 'MyWork',
+};
 
 export default function Nav() {
   const [isSticky, setIsSticky] = useState(false);
@@ -19,13 +30,14 @@ export default function Nav() {
     window.addEventListener('scroll', handleScroll);
   });
 
-  const style = isSticky ? `${classes.Nav} ${classes.Sticky}` : classes.Nav;
+  const navBarStyle = isSticky
+    ? `${classes.Nav} ${classes.Sticky}`
+    : classes.Nav;
 
   return (
-    <nav className={style}>
-      <ul>
-        <li>Where is the nav</li>
-      </ul>
+    <nav className={navBarStyle}>
+      <NavLink {...homeLinkProps}></NavLink>
+      <NavLink {...myWorkLinkProps}></NavLink>
     </nav>
   );
 }

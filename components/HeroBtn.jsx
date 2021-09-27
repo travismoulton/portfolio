@@ -1,6 +1,5 @@
 import { CSSTransition } from 'react-transition-group';
 import { useRef, useEffect, useState } from 'react';
-import { FiArrowDown } from 'react-icons/fi';
 import { FaLongArrowAltDown } from 'react-icons/fa';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
