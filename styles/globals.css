@@ -11,6 +11,7 @@ html {
   font-family: 'Lato';
 
   --color-green: #00b894;
+  --color-white: var(--color-white);
 }
 
 body {

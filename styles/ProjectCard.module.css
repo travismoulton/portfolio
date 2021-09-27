@@ -36,7 +36,7 @@
 
 .ProjectTitle {
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--color-white);
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
@@ -44,7 +44,7 @@
 }
 
 .ProjectDescription {
-  color: #fff;
+  color: var(--color-white);
   width: 75%;
   margin-left: auto;
   margin-right: auto;

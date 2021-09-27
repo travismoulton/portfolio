@@ -11,7 +11,7 @@
 
 .Header {
   font-size: 3rem;
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   font-weight: 300;
   word-spacing: 2rem;
