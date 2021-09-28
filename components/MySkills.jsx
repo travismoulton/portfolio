@@ -1,5 +1,5 @@
 import classes from '../styles/MySkills.module.css';
-import SkillsContainer from './SkillsContainer';
+import SkillsContainer from './Skills//SkillsContainer';
 
 export default function MySkills() {
   return (

@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import { FaLongArrowAltDown } from 'react-icons/fa';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
-import classes from '../styles/HeroBtn.module.css';
+import classes from '../../styles/HeroBtn.module.css';
 
 export default function HeroBtn({ startTimer }) {
   const nodeRef = useRef(null);

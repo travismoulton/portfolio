@@ -1,7 +1,7 @@
 import { CSSTransition } from 'react-transition-group';
 import { useRef } from 'react';
 
-import classes from '../styles/HeroHeader.module.css';
+import classes from '../../styles/HeroHeader.module.css';
 
 export default function HeroHeader({ show }) {
   const nodeRef1 = useRef(null);
