@@ -5,14 +5,12 @@ import HeroBtn from './HeroBtn';
 import HeroHeader from './HeroHeader';
 import HeroCanvas from '../HeroCanvas/HeroCanvas';
 
-export default function HeroContainer() {
+export default function Hero() {
   const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
     setShowAnimation(true);
   }, []);
-
-  console.log(showAnimation);
 
   return (
     <div id="Hero" className={classes.Hero}>

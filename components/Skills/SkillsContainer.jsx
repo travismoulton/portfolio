@@ -15,9 +15,18 @@ const skills = [
 export default function SkillsContainer() {
   return (
     <div className={classes.SkillsContainer}>
-      {skills.map((skill) => (
-        <SkillCard skill={skill} />
-      ))}
+      <div className={classes.SkillsRow}>
+        <SkillCard skill="html" />
+        <SkillCard skill="css" />
+        <SkillCard skill="sass" />
+        <SkillCard skill="javascript" />
+      </div>
+      <div className={classes.SkillsRow}>
+        <SkillCard skill="react" />
+        <SkillCard skill="rest api" />
+        <SkillCard skill="git" />
+        <SkillCard skill="firebase" />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .SkillsContainer {
-  width: 75%;
-  height: 20rem;
+  width: 70%;
+  height: 35rem;
   background-color: var(--color-white);
   border-radius: 3rem;
   padding: 3rem;
@@ -8,8 +8,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 
   box-shadow: 0, 0, 2px, 2px rgba(0, 0, 0, 0.2);
+}
+
+.SkillsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.SkillsRow:not(:last-child) {
+  margin-bottom: 4rem;
 }
 
 .SkillCard {
@@ -34,7 +48,7 @@
 }
 
 .SkillCard:not(:last-child) {
-  margin-right: 4rem;
+  margin-right: 10rem;
 }
 
 .ImgWrapper {
@@ -48,4 +62,103 @@
   text-transform: uppercase;
   font-weight: 300;
   color: #666;
+}
+
+@media only screen and (max-width: 1250px) {
+  .SkillsContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .SkillsContainer {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .SkillsContainer {
+    width: 95%;
+  }
+
+  .SkillCard:not(:last-child) {
+    margin-right: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .SkillCard:not(:last-child) {
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .SkillCard:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .SkillsContainer {
+    height: 70rem;
+    width: 80%;
+  }
+
+  .SkillCard:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .SkillCard:nth-child(1),
+  .SkillCard:nth-child(3) {
+    margin-right: 7rem;
+  }
+
+  .SkillCard:nth-child(1),
+  .SkillCard:nth-child(2) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .SkillsContainer {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .SkillsContainer {
+    padding: 1rem;
+  }
+
+  .SkillCard:nth-child(1),
+  .SkillCard:nth-child(3) {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .SkillsContainer {
+    height: 110rem;
+    width: 80%;
+  }
+
+  .SkillsRow {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+  }
+
+  .SkillCard:nth-child(1),
+  .SkillCard:nth-child(3) {
+    margin-right: 0rem;
+  }
+
+  .SkillCard:nth-child(1),
+  .SkillCard:nth-child(2) {
+    margin-bottom: 0rem;
+  }
+
+  .SkillCard:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
