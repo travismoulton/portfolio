@@ -1,8 +1,19 @@
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { AiOutlineHome } from 'react-icons/ai';
+import { BsPerson } from 'react-icons/bs';
+import { AiOutlineFolderOpen } from 'react-icons/ai';
+import { SiSkillshare } from 'react-icons/si';
 
 import classes from '../styles/NavLink.module.css';
 
-export default function NavLink({ linkTxt, target }) {
+const icons = {
+  home: <AiOutlineHome />,
+  work: <AiOutlineFolderOpen />,
+  skill: <SiSkillshare />,
+  about: <BsPerson />,
+};
+
+export default function NavLink({ linkTxt, target, icon }) {
   return (
     <ScrollLink
       to={target}
@@ -12,7 +23,7 @@ export default function NavLink({ linkTxt, target }) {
       activeClass={classes.active}
       spy={true}
     >
-      {linkTxt}
+      <span>{linkTxt}</span> {icons[icon]}
     </ScrollLink>
   );
 }

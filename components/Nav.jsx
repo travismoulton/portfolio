@@ -6,21 +6,25 @@ import classes from '../styles/Nav.module.css';
 const homeLinkProps = {
   linkTxt: 'Home',
   target: 'Hero',
+  icon: 'home',
 };
 
 const myWorkLinkProps = {
   linkTxt: 'My Work',
   target: 'MyWork',
+  icon: 'work',
 };
 
 const skillsProps = {
   linkTxt: 'My Skills',
   target: 'MySkills',
+  icon: 'skill',
 };
 
 const aboutProps = {
   linkTxt: 'About Me',
   target: 'About',
+  icon: 'about',
 };
 
 export default function Nav() {
