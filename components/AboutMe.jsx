@@ -4,7 +4,7 @@ import AboutMePic from './AboutMePic';
 export default function AboutMe() {
   return (
     <section className={classes.About} id="About">
-      <h2 className={classes.Header}>About me</h2>
+      <h2 className="Header">About me</h2>
       <AboutMePic />
       <div className={classes.TextContainer}>
         <p className={classes.Text}>

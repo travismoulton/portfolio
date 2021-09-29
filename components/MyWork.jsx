@@ -29,7 +29,7 @@ const workoutPlannerDetails = {
 export default function MyWork() {
   return (
     <section className={classes.MyWork} id="MyWork">
-      <h2 className={classes.Header}>My work</h2>
+      <h2 className="Header">My work</h2>
       <ProjectCard {...MTGDetails} />
       <ProjectCard {...workoutPlannerDetails} />
     </section>

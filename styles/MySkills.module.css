@@ -7,12 +7,3 @@
   align-items: center;
   padding: 3rem 1rem;
 }
-
-.Header {
-  font-size: 3rem;
-  color: var(--color-white);
-  text-transform: uppercase;
-  font-weight: 300;
-  word-spacing: 2rem;
-  margin-top: 4.5rem;
-}
