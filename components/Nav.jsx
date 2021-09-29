@@ -13,6 +13,16 @@ const myWorkLinkProps = {
   target: 'MyWork',
 };
 
+const skillsProps = {
+  linkTxt: 'My Skills',
+  target: 'MySkills',
+};
+
+const aboutProps = {
+  linkTxt: 'About Me',
+  target: 'About',
+};
+
 export default function Nav() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -36,8 +46,10 @@ export default function Nav() {
 
   return (
     <nav className={navBarStyle}>
-      <NavLink {...homeLinkProps}></NavLink>
-      <NavLink {...myWorkLinkProps}></NavLink>
+      <NavLink {...homeLinkProps} />
+      <NavLink {...myWorkLinkProps} />
+      <NavLink {...aboutProps} />
+      <NavLink {...skillsProps} />
     </nav>
   );
 }

@@ -52,3 +52,24 @@
   box-shadow: 1.2rem 0 1px -4px rgba(0, 184, 148, 0.7),
     1.2rem 0 0 3px rgba(0, 184, 148, 0.4), 1.2rem 0 0 6px rgba(0, 184, 148, 0.2);
 }
+
+@media only screen and (max-width: 600px) {
+  .ImgWrapper {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .ImgWrapper {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .ImgWrapper {
+    width: 20rem;
+    height: 20rem;
+  }
+}
