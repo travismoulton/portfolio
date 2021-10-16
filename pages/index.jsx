@@ -6,6 +6,7 @@ import MyWork from '../components/MyWork';
 import Nav from '../components/Nav';
 import MySkills from '../components/MySkills';
 import AboutMe from '../components/AboutMe';
+import Contact from '../components/Contact';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <MyWork />
       <AboutMe />
       <MySkills />
+      <Contact />
     </div>
   );
 }

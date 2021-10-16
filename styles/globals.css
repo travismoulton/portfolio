@@ -10,7 +10,6 @@ html {
   font-size: 62.5%;
   font-family: 'Lato';
 
-  /* --color-green: #00b894; */
   --color-purple: #6c5ce7;
   --color-white: #fff;
 
@@ -23,12 +22,13 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: #f7f7f7;
+  background-color: #1a1a1a;
 }
 
 .Header {
   font-size: 3rem;
-  color: #2d3436;
+
+  color: var(--color-white);
   text-transform: uppercase;
   font-weight: 300;
   word-spacing: 2rem;

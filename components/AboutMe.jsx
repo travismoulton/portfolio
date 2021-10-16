@@ -8,10 +8,10 @@ export default function AboutMe() {
       <AboutMePic />
       <div className={classes.TextContainer}>
         <p className={classes.Text}>
-          I'm a self taught front-end web developer with the goal of learning
-          the backend and being able to contribute on the full stack. I love
-          solving problems with Javascirpt and building beautiful front ends. I
-          am excited at the prospect of working along side other excellent
+          I'm a self taught front-end web developer working on learning the
+          backend and being able to contribute on the full stack. I love solving
+          problems with Javascirpt and building beautiful front ends. I am
+          excited at the prospect of working along side other excellent
           developers and taking my skills to the next level. My 10 years of
           exerpience in retail management have given me the opprotunity to
           develop exceptional communication, interpersonal, and orginizational
