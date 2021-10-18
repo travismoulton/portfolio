@@ -34,28 +34,28 @@ const contactProps = {
 };
 
 export default function Nav() {
-  const [isSticky, setIsSticky] = useState(false);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  function handleScroll() {
-    const offSet = window.scrollY;
+  // function handleScroll() {
+  //   const offSet = window.scrollY;
 
-    if (offSet >= window.innerHeight) {
-      if (!isSticky) setIsSticky(true);
-    } else {
-      if (isSticky) setIsSticky(false);
-    }
-  }
+  //   if (offSet >= window.innerHeight) {
+  //     if (!isSticky) setIsSticky(true);
+  //   } else {
+  //     if (isSticky) setIsSticky(false);
+  //   }
+  // }
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  // });
 
-  const navBarStyle = isSticky
-    ? `${classes.Nav} ${classes.Sticky}`
-    : classes.Nav;
+  // const navBarStyle = isSticky
+  //   ? `${classes.Nav} ${classes.Sticky}`
+  //   : classes.Nav;
 
   return (
-    <nav className={navBarStyle}>
+    <nav className={classes.Nav}>
       <NavLink {...homeLinkProps} />
       <NavLink {...myWorkLinkProps} />
       <NavLink {...aboutProps} />
