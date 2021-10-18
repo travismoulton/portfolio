@@ -13,7 +13,8 @@ function setNumDots(canvas) {
   else if (canvas.width > 1300) canvas.numDots = 550;
   else if (canvas.width > 1100) canvas.numDots = 400;
   else if (canvas.width > 900) canvas.numDots = 300;
-  else if (canvas.width < 901) canvas.numDots = 200;
+  else if (canvas.width > 600) canvas.numDots = 200;
+  else if (canvas.width < 601) canvas.numDots = 100;
 }
 
 function setRatioMultiplier(canvas) {
