@@ -12,7 +12,8 @@ function setNumDots(canvas) {
   if (canvas.width > 1600) canvas.numDots = 700;
   else if (canvas.width > 1300) canvas.numDots = 550;
   else if (canvas.width > 1100) canvas.numDots = 400;
-  else if (canvas.width < 1101) canvas.numDots = 300;
+  else if (canvas.width > 900) canvas.numDots = 300;
+  else if (canvas.width < 901) canvas.numDots = 200;
 }
 
 function setRatioMultiplier(canvas) {
@@ -147,11 +148,13 @@ function updateDots(canvas, mousePosition) {
     dot.y += dot.deltaY;
   });
 
-  fadeDots(mousePosition, canvas);
+  if (canvas.width > 800) {
+    fadeDots(mousePosition, canvas);
 
-  const dotPairs = generateDotPairs(canvas.dots, mousePosition);
+    const dotPairs = generateDotPairs(canvas.dots, mousePosition);
 
-  dotPairs.forEach((pair) => drawLine(pair[0], pair[1], canvas));
+    dotPairs.forEach((pair) => drawLine(pair[0], pair[1], canvas));
+  }
 
   canvas.animationId = requestAnimationFrame(() =>
     updateDots(canvas, mousePosition)
