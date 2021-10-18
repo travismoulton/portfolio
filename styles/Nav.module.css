@@ -2,8 +2,10 @@
   height: 5rem;
   width: 100%;
   background-color: var(--color-purple);
-  position: absolute;
-  bottom: -5rem;
+  /* position: absolute; */
+  position: sticky;
+  /* bottom: -5rem; */
+  top: 0;
   z-index: 100;
 
   display: flex;
@@ -12,7 +14,7 @@
 }
 
 .Sticky {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
 }
