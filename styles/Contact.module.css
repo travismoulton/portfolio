@@ -21,13 +21,20 @@
 .EmailLinkWrapper {
   background-color: var(--color-white);
   border-radius: 3rem;
-  border: 1px solid #333;
+  border: 1px solid #d9d9d9;
   padding: 1rem;
+  width: 50%;
+  margin-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.EmailLinkWrapper p {
+  font-size: 1.4rem;
+  color: #333;
 }
 
 .EmailLinkWrapper svg {
@@ -54,6 +61,11 @@
   width: 75%;
 }
 
+.ContactForm label {
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
 .ContactForm input {
   width: 100%;
   height: 3rem;
@@ -63,6 +75,61 @@
   border-radius: 3px;
 }
 
-.ContactForm input:focus {
+.ContactForm input:focus,
+.ContactForm textarea:focus {
   outline: none;
+}
+
+.ContactForm textarea {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ContactFormHeader {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.ContactForm button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s;
+
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.ContactForm button::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  background-color: var(--color-purple);
+  width: 110%;
+  bottom: 1px;
+  display: block;
+  transform-origin: bottom;
+  transition: all 0.25s;
+  z-index: -1;
+}
+
+.ContactForm button:hover::after {
+  height: 100%;
+}
+
+.ContactForm button:hover {
+  color: var(--color-white);
 }
