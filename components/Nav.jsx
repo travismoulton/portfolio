@@ -27,6 +27,12 @@ const aboutProps = {
   icon: 'about',
 };
 
+const contactProps = {
+  linkTxt: 'Contact',
+  target: 'Contact',
+  icon: 'contact',
+};
+
 export default function Nav() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -54,6 +60,7 @@ export default function Nav() {
       <NavLink {...myWorkLinkProps} />
       <NavLink {...aboutProps} />
       <NavLink {...skillsProps} />
+      <NavLink {...contactProps} />
     </nav>
   );
 }

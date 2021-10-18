@@ -3,6 +3,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { BsPerson } from 'react-icons/bs';
 import { AiOutlineFolderOpen } from 'react-icons/ai';
 import { SiSkillshare } from 'react-icons/si';
+import { AiOutlineContacts } from 'react-icons/ai';
 
 import classes from '../styles/NavLink.module.css';
 
@@ -11,6 +12,7 @@ const icons = {
   work: <AiOutlineFolderOpen />,
   skill: <SiSkillshare />,
   about: <BsPerson />,
+  contact: <AiOutlineContacts />,
 };
 
 export default function NavLink({ linkTxt, target, icon }) {

@@ -1,6 +1,6 @@
 .NavLink {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: underline;
   transition: color 0.3s;
   font-size: 1.8rem;
