@@ -14,8 +14,14 @@
   /* position: absolute; */
 }
 
-.Sticky {
+/* .Sticky {
   position: fixed;
   top: 0;
   left: 0;
+} */
+
+@media only screen and (max-width: 650px) {
+  .Nav {
+    justify-content: end;
+  }
 }

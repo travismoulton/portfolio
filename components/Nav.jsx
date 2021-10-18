@@ -2,6 +2,7 @@
 
 import NavLink from './NavLink';
 import classes from '../styles/Nav.module.css';
+import DrawerToggle from './DrawerToggle';
 
 const homeLinkProps = {
   linkTxt: 'Home',
@@ -61,6 +62,7 @@ export default function Nav() {
       <NavLink {...aboutProps} />
       <NavLink {...skillsProps} />
       <NavLink {...contactProps} />
+      <DrawerToggle />
     </nav>
   );
 }
