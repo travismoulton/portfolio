@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 
 import styles from '../styles/Home.module.css';
@@ -7,8 +8,11 @@ import Nav from '../components/Nav';
 import MySkills from '../components/MySkills';
 import AboutMe from '../components/AboutMe';
 import Contact from '../components/Contact';
+import SideBar from '../components/SideBar';
 
 export default function Home() {
+  const [showSideBar, setShowSideBar] = useState(false);
+
   return (
     <div className={styles.app}>
       <Head>
@@ -22,7 +26,8 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <Nav />
+      <Nav toggleSideBar={() => setShowSideBar((prevShow) => !prevShow)} />
+      <SideBar show={showSideBar} closed={() => setShowSideBar(false)} />
       <MyWork />
       <AboutMe />
       <MySkills />

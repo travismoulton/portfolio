@@ -29,9 +29,3 @@
 .NavLink:not(:last-child) {
   margin-right: 2.5rem;
 }
-
-@media only screen and (max-width: 649px) {
-  .NavLink {
-    display: none;
-  }
-}

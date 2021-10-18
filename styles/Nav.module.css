@@ -8,20 +8,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Old code. */
-  /* bottom: -5rem; */
-  /* position: absolute; */
 }
 
-/* .Sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-} */
+.NavItemsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 650px) {
   .Nav {
     justify-content: end;
+  }
+  .NavItemsWrapper {
+    display: none;
   }
 }
