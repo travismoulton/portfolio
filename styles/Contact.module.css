@@ -30,7 +30,39 @@
   align-items: center;
 }
 
+.EmailLinkWrapper svg {
+  margin-bottom: 1rem;
+}
+
 .EmailLink {
   color: #333;
-  text-decoration: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.EmailLink:hover {
+  color: #666;
+}
+
+.ContactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 75%;
+}
+
+.ContactForm input {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.ContactForm input:focus {
+  outline: none;
 }

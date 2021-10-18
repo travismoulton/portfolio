@@ -5,7 +5,7 @@ import classes from '../../styles/Contact.module.css';
 export default function EmailLink() {
   return (
     <div className={classes.EmailLinkWrapper}>
-      <AiOutlineMail />
+      <AiOutlineMail size="30px" color="var(--color-purple)" />
       <a
         href="mailto:travis.moulton002@gmail.com"
         className={classes.EmailLink}
