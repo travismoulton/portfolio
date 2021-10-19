@@ -7,7 +7,7 @@ export default function ContactForm() {
 
   if (formState.succeeded)
     return (
-      <p>
+      <p className={classes.SuccessMessage}>
         Thank you for reaching out! I will review your message and get back to
         you shortly.
       </p>

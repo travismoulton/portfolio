@@ -158,3 +158,8 @@
 .ContactForm button:hover::after {
   height: 100%;
 }
+
+.SuccessMessage {
+  font-size: 2rem;
+  color: var(--color-white);
+}
