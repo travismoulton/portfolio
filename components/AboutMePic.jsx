@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import img from '../public/me.jpg';
+import img from '../public/me2.jpg';
 import classes from '../styles/AboutMe.module.css';
 
 export default function AboutMePic() {

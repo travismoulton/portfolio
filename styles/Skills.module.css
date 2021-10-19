@@ -1,7 +1,6 @@
 .SkillsContainer {
   width: 70%;
   height: 35rem;
-  /* background-color: var(--color-white); */
   border: 1px solid var(--color-purple);
   border-radius: 3rem;
   padding: 3rem;
@@ -29,7 +28,6 @@
 
 .SkillCard {
   background-color: var(--color-white);
-  /* border-radius: 3px; */
   border-radius: 3rem;
   border: 1px solid #eee;
 
@@ -45,7 +43,6 @@
 }
 
 .SkillCard:hover {
-  /* box-shadow: 0 0.5rem 1rem 2px rgba(0, 0, 0, 0.4); */
   box-shadow: 0 0.5rem 1rem 2px rgba(255, 255, 255, 0.4);
   transform: translateY(-1.3rem);
 }
