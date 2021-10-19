@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import NavLink from './NavLink';
 import classes from '../styles/Nav.module.css';
 import DrawerToggle from './DrawerToggle';

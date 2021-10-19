@@ -3,9 +3,9 @@ import Image from 'next/image';
 import img from '../public/me2.jpg';
 import classes from '../styles/AboutMe.module.css';
 
-export default function AboutMePic() {
+export default function AboutMePic({ refProp }) {
   return (
-    <div className={classes.ImgWrapper}>
+    <div className={classes.ImgWrapper} ref={refProp}>
       <Image
         className={classes.Img}
         src={img}
