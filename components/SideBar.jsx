@@ -22,9 +22,9 @@ export default function SideBar({ show, closed }) {
       <div className={styles.join(' ')}>
         <nav className={classes.Nav}>
           <NavLink {...homeLinkProps} />
-          <NavLink {...myWorkLinkProps} />
           <NavLink {...aboutProps} />
           <NavLink {...skillsProps} />
+          <NavLink {...myWorkLinkProps} />
           <NavLink {...contactProps} />
         </nav>
       </div>
