@@ -82,6 +82,10 @@
   .ContactForm {
     width: 100%;
   }
+
+  .ContactWrapper {
+    width: 85%;
+  }
 }
 
 .ContactForm label {
