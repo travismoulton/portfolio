@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .Header {
@@ -31,7 +31,8 @@
 .Text {
   /* color: #666; */
   color: var(--color-white);
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 2.7rem;
 }
 
 .ImgWrapper {

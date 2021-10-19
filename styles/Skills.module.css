@@ -29,7 +29,8 @@
 
 .SkillCard {
   background-color: var(--color-white);
-  border-radius: 3px;
+  /* border-radius: 3px; */
+  border-radius: 3rem;
   border: 1px solid #eee;
 
   width: 12rem;
