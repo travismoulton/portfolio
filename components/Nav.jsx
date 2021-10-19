@@ -18,9 +18,9 @@ export default function Nav({ toggleSideBar }) {
     <nav className={classes.Nav}>
       <div className={classes.NavItemsWrapper}>
         <NavLink {...homeLinkProps} />
-        <NavLink {...myWorkLinkProps} />
         <NavLink {...aboutProps} />
         <NavLink {...skillsProps} />
+        <NavLink {...myWorkLinkProps} />
         <NavLink {...contactProps} />
       </div>
       <DrawerToggle clicked={toggleSideBar} />

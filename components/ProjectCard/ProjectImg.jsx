@@ -9,7 +9,13 @@ const images = { MTGImage, WorkoutImg };
 export default function ProjectImg({ img }) {
   return (
     <div className={classes.ProjectImgWrapper}>
-      <Image src={images[img]} alt={img} layout="fill" loading="eager" />
+      <Image
+        src={images[img]}
+        alt={img}
+        layout="fill"
+        loading="eager"
+        className={classes.Img}
+      />
     </div>
   );
 }

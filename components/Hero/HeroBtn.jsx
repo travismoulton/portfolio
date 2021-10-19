@@ -22,7 +22,7 @@ export default function HeroBtn({ startTimer }) {
       classNames="hero__btn"
     >
       <ScrollLink
-        to="MyWork"
+        to="About"
         smooth={true}
         duration={700}
         className={classes.ScrollLink}

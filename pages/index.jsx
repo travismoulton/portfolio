@@ -28,9 +28,9 @@ export default function Home() {
       <Hero />
       <Nav toggleSideBar={() => setShowSideBar((prevShow) => !prevShow)} />
       <SideBar show={showSideBar} closed={() => setShowSideBar(false)} />
-      <MyWork />
       <AboutMe />
       <MySkills />
+      <MyWork />
       <Contact />
     </div>
   );

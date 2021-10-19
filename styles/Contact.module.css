@@ -8,7 +8,7 @@
 }
 
 .ContactWrapper {
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
   border-radius: 3rem;
   padding: 3rem 1rem;
   display: flex;
@@ -80,7 +80,8 @@
 }
 
 .ContactForm label {
-  color: #333;
+  /* color: #333; */
+  color: var(--color-white);
   margin-bottom: 0.3rem;
 }
 
@@ -89,7 +90,8 @@
   height: 3rem;
   margin-bottom: 1rem;
 
-  border: 1px solid #666;
+  /* border: 1px solid #666; */
+  border: 1px solid var(--color-purple);
   border-radius: 3px;
 }
 
@@ -106,7 +108,9 @@
 .ContactFormHeader {
   font-size: 2.2rem;
   font-weight: 400;
-  color: #333;
+  /* color: #333; */
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-purple);
   text-transform: uppercase;
 }
 
@@ -118,7 +122,8 @@
   position: relative;
   transition: color 0.25s;
 
-  color: #333;
+  /* color: #333; */
+  color: var(--color-white);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 3px;
@@ -148,6 +153,6 @@
   height: 100%;
 }
 
-.ContactForm button:hover {
+/* .ContactForm button:hover {
   color: var(--color-white);
-}
+} */
