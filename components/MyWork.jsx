@@ -21,7 +21,7 @@ const workoutPlannerDetails = {
   img: 'WorkoutImg',
   title: 'The Workout Planner',
   desc: workoutDesc,
-  siteLink: 'https::/the-workout-planner.com',
+  siteLink: 'https:/the-workout-planner.com',
   siteLinkTxt: 'Live Site',
   repoLink: 'https://github.com/travismoulton/workout-rebuild',
   repoLinkTxt: 'Github Repo',
