@@ -48,7 +48,7 @@ export default function AboutMe() {
               solving problems with Javascirpt and exploring technology. I am
               excited at the prospect of working along side other excellent
               developers and taking my skills to the next level. My 10 years of
-              exerpience in retail management have given me the opprotunity to
+              exerpience in retail management have given me the opportunity to
               develop exceptional communication, interpersonal, and
               orginizational skills, and make me an excellent addition to your
               team.
