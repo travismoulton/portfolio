@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <div id="Hero" className={classes.Hero}>
-      {/* <HeroCanvas /> */}
+      <HeroCanvas />
       <div className={classes.HeroWrapper}>
         <HeroHeader show={showAnimation} />
         <HeroBtn startTimer={showAnimation} />

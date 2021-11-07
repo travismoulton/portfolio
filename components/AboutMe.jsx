@@ -50,7 +50,7 @@ export default function AboutMe() {
               developers and taking my skills to the next level. My 10 years of
               exerpience in retail management have given me the opportunity to
               develop exceptional communication, interpersonal, and
-              orginizational skills, and make me an excellent addition to your
+              organizational skills, and make me an excellent addition to your
               team.
             </p>
           </div>
