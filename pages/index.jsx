@@ -25,13 +25,15 @@ export default function Home() {
         <link rel="icon" href="./favicon.ico" />
       </Head>
 
-      <Hero />
-      <Nav toggleSideBar={() => setShowSideBar((prevShow) => !prevShow)} />
-      <SideBar show={showSideBar} closed={() => setShowSideBar(false)} />
-      <AboutMe />
-      <MySkills />
-      <MyWork />
-      <Contact />
+      <main>
+        <Hero />
+        <Nav toggleSideBar={() => setShowSideBar((prevShow) => !prevShow)} />
+        <SideBar show={showSideBar} closed={() => setShowSideBar(false)} />
+        <AboutMe />
+        <MySkills />
+        <MyWork />
+        <Contact />
+      </main>
     </div>
   );
 }
