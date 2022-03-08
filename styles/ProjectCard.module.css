@@ -147,3 +147,24 @@
     height: 35rem;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .ThreeLinks {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+
+  /* .ProjectLinks .ThreeLinks {
+    margin-left: 0;
+  } */
+
+  .ProjectCard {
+    height: 60rem;
+  }
+
+  .ProjectCard__threadedChat {
+    height: 70.5rem;
+  }
+}
