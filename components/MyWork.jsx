@@ -35,8 +35,8 @@ const threadedChatDetails = {
   desc: threadedChatDesc,
   siteLink: 'https://www.threddit.win',
   siteLinkTxt: 'Live Site',
-  repoLink: 'https://github.com/travismoulton/social-media-frontend',
-  repoLinkTxt: 'Github Repo',
+  frontEndRepo: 'https://github.com/travismoulton/social-media-frontend',
+  backEndRepo: 'https://github.com/travismoulton/Social-media-backend',
 };
 export default function MyWork() {
   return (

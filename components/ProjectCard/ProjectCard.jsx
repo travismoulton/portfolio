@@ -12,6 +12,8 @@ export default function ProjectCard({
   siteLinkTxt,
   repoLink,
   repoLinkTxt,
+  frontEndRepo,
+  backEndRepo,
 }) {
   return (
     <div className={classes.ProjectCard}>
@@ -20,7 +22,13 @@ export default function ProjectCard({
         <ProjectDescription desc={desc} />
         <div className={classes.ProjectLinks}>
           <ProjectLink link={siteLink} linkTxt={siteLinkTxt} />
-          <ProjectLink link={repoLink} linkTxt={repoLinkTxt} />
+          {repoLink && <ProjectLink link={repoLink} linkTxt={repoLinkTxt} />}
+          {frontEndRepo && (
+            <ProjectLink link={frontEndRepo} linkTxt="Front End Repo" />
+          )}
+          {backEndRepo && (
+            <ProjectLink link={backEndRepo} linkTxt="Back End Repo" />
+          )}
         </div>
       </div>
       <ProjectImg img={img} />
