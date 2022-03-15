@@ -44,7 +44,7 @@ export default function AboutMe() {
           <div className={classes.TextContainer} ref={txtRef}>
             <p className={classes.Text}>
               I'm a self taught full stack web developer. I love solving
-              problems with Javascirpt and exploring technology. I am excited at
+              problems with Javascript and exploring technology. I am excited at
               the prospect of working along side other excellent developers and
               taking my skills to the next level. My 10 years of exerpience in
               retail management have given me the opportunity to develop
