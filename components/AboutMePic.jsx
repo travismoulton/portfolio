@@ -11,7 +11,7 @@ export default function AboutMePic({ refProp }) {
         src={img}
         alt="Picture of myself"
         layout="fill"
-        loading="eager"
+        priority
       />
     </div>
   );
