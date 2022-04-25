@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import img from '../public/me4-min.jpg';
+import img from '../public/me4-min copy.png';
 import classes from '../styles/AboutMe.module.css';
 
 export default function AboutMePic({ refProp }) {
