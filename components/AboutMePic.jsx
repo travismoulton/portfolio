@@ -12,7 +12,7 @@ export default function AboutMePic({ refProp }) {
         alt="Picture of myself"
         layout="fill"
         loading="eager"
-        priority={true}
+        // priority
       />
     </div>
   );
