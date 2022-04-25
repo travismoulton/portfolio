@@ -6,16 +6,14 @@ import classes from '../styles/AboutMe.module.css';
 export default function AboutMePic({ refProp }) {
   return (
     <div className={classes.ImgWrapper} ref={refProp}>
-      {/* <Image
+      <Image
         className={classes.Img}
         src={img}
         alt="Picture of myself"
         layout="fill"
         loading="eager"
-        // priority
-      /> */}
-
-      <img src={img} alt="Bio Picture" className={classes.Img} />
+        priority
+      />
     </div>
   );
 }
