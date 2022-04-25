@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import img from '../public/me2.jpg';
+import img from '../public/me2-min.jpg';
 import classes from '../styles/AboutMe.module.css';
 
 export default function AboutMePic({ refProp }) {
@@ -11,7 +11,8 @@ export default function AboutMePic({ refProp }) {
         src={img}
         alt="Picture of myself"
         layout="fill"
-        priority
+        loading="eager"
+        priority={true}
       />
     </div>
   );
