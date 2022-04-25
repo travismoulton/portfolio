@@ -25,34 +25,34 @@ export default function AboutMe() {
     <section className={classes.About} id="About">
       <h2 className={classes.Header}>About me</h2>
       <div className={classes.AboutWrapper}>
-        <CSSTransition
+        {/* <CSSTransition
           nodeRef={picRef}
           in={showAnimation}
           timeout={1200}
           mountOnEnter
           classNames="About__pic"
-        >
-          <AboutMePic refProp={picRef} />
-        </CSSTransition>
-        <CSSTransition
+        > */}
+        <AboutMePic refProp={picRef} />
+        {/* </CSSTransition> */}
+        {/* <CSSTransition
           nodeRef={txtRef}
           in={showAnimation}
           timeout={1200}
           mountOnEnter
           classNames="About__text"
-        >
-          <div className={classes.TextContainer} ref={txtRef}>
-            <p className={classes.Text}>
-              I'm a self taught full stack web developer. I love solving
-              problems with Javascript and exploring technology. I am excited at
-              the prospect of working along side other excellent developers and
-              taking my skills to the next level. My 10 years of experience in
-              retail management have given me the opportunity to develop
-              exceptional communication, interpersonal, and organizational
-              skills, and make me an excellent addition to your team.
-            </p>
-          </div>
-        </CSSTransition>
+        > */}
+        <div className={classes.TextContainer} ref={txtRef}>
+          <p className={classes.Text}>
+            I'm a self taught full stack web developer. I love solving problems
+            with Javascript and exploring technology. I am excited at the
+            prospect of working along side other excellent developers and taking
+            my skills to the next level. My 10 years of experience in retail
+            management have given me the opportunity to develop exceptional
+            communication, interpersonal, and organizational skills, and make me
+            an excellent addition to your team.
+          </p>
+        </div>
+        {/* </CSSTransition> */}
       </div>
     </section>
   );
