@@ -27,23 +27,3 @@
   transform: translateY(0);
   transition: opacity 1.2s, transform 1.2s;
 }
-
-.About__pic-enter {
-  opacity: 0;
-  transform: translateX(-30%);
-}
-.About__pic-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1.2s, transform 1.2s;
-}
-
-.About__text-enter {
-  opacity: 0;
-  transform: translateX(30%);
-}
-.About__text-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1.2s, transform 1.2s;
-}

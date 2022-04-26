@@ -1,4 +1,3 @@
-import { CSSTransition } from 'react-transition-group';
 import { useRef, useState, useEffect } from 'react';
 
 import classes from '../styles/AboutMe.module.css';
@@ -25,22 +24,8 @@ export default function AboutMe() {
     <section className={classes.About} id="About">
       <h2 className={classes.Header}>About me</h2>
       <div className={classes.AboutWrapper}>
-        {/* <CSSTransition
-          nodeRef={picRef}
-          in={showAnimation}
-          timeout={1200}
-          mountOnEnter
-          classNames="About__pic"
-        > */}
         <AboutMePic refProp={picRef} />
-        {/* </CSSTransition> */}
-        {/* <CSSTransition
-          nodeRef={txtRef}
-          in={showAnimation}
-          timeout={1200}
-          mountOnEnter
-          classNames="About__text"
-        > */}
+
         <div className={classes.TextContainer} ref={txtRef}>
           <p className={classes.Text}>
             I'm a self taught full stack web developer. I love solving problems
@@ -52,7 +37,6 @@ export default function AboutMe() {
             an excellent addition to your team.
           </p>
         </div>
-        {/* </CSSTransition> */}
       </div>
     </section>
   );
